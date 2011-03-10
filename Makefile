@@ -27,7 +27,6 @@
 # policies, either expressed or implied, of Vincent Driessen.
 #
 prefix=/usr
-scriptdir=$(shell git --exec-path)
 
 # files that need mode 755
 EXEC_FILES=git-flow
@@ -47,11 +46,11 @@ all:
 	@echo "       make uninstall"
 
 install:
-	mkdir -p $(DESTDIR)$(prefix)/bin $(DESTDIR)$(scriptdir)
+	mkdir -p $(DESTDIR)$(prefix)/bin
 	@test -f gitflow-shFlags || git submodule update --init
 	install -d -m 0755 $(DESTDIR)$(prefix)/bin
 	install -m 0755 $(EXEC_FILES) $(DESTDIR)$(prefix)/bin
-	install -m 0644 $(SCRIPT_FILES) $(DESTDIR)$(scriptdir)
+	install -m 0644 $(SCRIPT_FILES) $(DESTDIR)$(prefix)/bin
 
 uninstall:
 	test -d $(DESTDIR)$(prefix)/bin && \
