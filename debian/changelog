@@ -2,7 +2,7 @@ git-flow (0.4.1-0ppa3) natty; urgency=low
 
   * Rebuilt for natty.
 
- -- Ilkka Laukkanen <ilkkala@pcft-uic3>  Mon, 02 May 2011 11:44:37 +0300
+ -- Ilkka Laukkanen <ilkka.s.laukkanen@gmail.com>  Mon, 02 May 2011 11:44:37 +0300
 
 git-flow (0.4.1-0ppa2) maverick; urgency=low
 
